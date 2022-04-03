@@ -33,16 +33,16 @@ var app = {
     },
     songs: [
         {
-            name: 'Watermelon Sugar',
-            singer: 'Harry Styles',
-            path: './assest/music/Watermelon Sugar.mp3',
-            image: 'https://f4.bcbits.com/img/a2890996789_10.jpg'
-        },
-        {
             name: 'Closer',
             singer: 'The Chainsmokers',
             path: './assest/music/Closer.mp3',
             image: 'https://i1.sndcdn.com/artworks-000179073287-3ur3or-t500x500.jpg'
+        },
+        {
+            name: 'Watermelon Sugar',
+            singer: 'Harry Styles',
+            path: './assest/music/Watermelon Sugar.mp3',
+            image: 'https://f4.bcbits.com/img/a2890996789_10.jpg'
         },
         {
             name: 'Blinding Lights',
