@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music player</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUr4LrcDcXqD7ux2FF3M8c8-0ibiT3ILWBMQ&usqp=CAU" type="image/x-icon">
+    <link rel="stylesheet" href="./assest/css/style.css">
+    <link rel="stylesheet" href="./assest/icon/fontawesome-free-6.1.1-web/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" /> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" /> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> -->
+</head>
+<body>
+
+<div class="player">
+  <!-- Dashboard -->
+  <div class="dashboard">
+    <div class="like">
+      <i class="fa-regular fa-heart icon active"></i>
+      <i class="fa-solid fa-heart icon"></i>
+    </div>
+    <!-- Header -->
+    <header>
+      <h4>Now playing:</h4>
+      <h2>Song's Name</h2>
+      <h1>Singer</h1>
+    </header>
+
+    <!-- CD -->
+    <div class="cd">
+      <div class="cd-thumb" style="background-image: url('')">
+      </div>
+    </div>
+
+    <div class="volume-and-audio-progress">
+      <!-- Progress -->
+        <div class="audio-progress">
+          <input id="progress" class="progress" type="range" value="0" step="0.01" min="0" max="100">
+        </div>
+      <!-- Control Volume -->
+      <div class="control-volume">
+        <div class="volume-icon">
+          <i class="fa-solid fa-volume-high active"></i>
+          <!-- <i class="fa-solid fa-volume-low"></i> -->
+          <i class="fa-solid fa-volume-xmark"></i>
+        </div>
+          <input id="volume" class="volume" type="range" value="80" step="0.01" min="0" max="100">
+      </div>
+    </div>
+
+    <!-- Time Block -->
+    <div class="time-block">
+      <div class="audio__current-time">00:00</div>
+      <div class="audio__duration-time">--:--</div>
+    </div>
+
+    <!-- Control -->
+    <div class="control">
+      <div class="btn btn-repeat">
+        <i class="fas fa-redo"></i>
+      </div>
+      <div class="btn btn-prev">
+        <i class="fas fa-step-backward"></i>
+      </div>
+      <div class="btn btn-toggle-play">
+        <i class="fas fa-pause icon-pause"></i>
+        <i class="fas fa-play icon-play"></i>
+      </div>
+      <div class="btn btn-next">
+        <i class="fas fa-step-forward"></i>
+      </div>
+      <div class="btn btn-random">
+        <i class="fas fa-random"></i>
+      </div>
+    </div>
+      <audio id="audio" src=""></audio>
+  </div>
+
+  <!-- Playlist -->
+  <div class="playlist">
+    <!-- <div class="song active">
+      <div class="thumb" style="background-image: url('https://photo-resize-zmp3.zadn.vn/w240_r1x1_webp/cover/c/6/d/e/c6def069a1a885c41fe479358fa7c506.jpg')">
+      </div>
+      <div class="body">
+        <h3 class="title">Chạy về khóc với anh</h3>
+        <p class="author">ERIK</p>
+      </div>
+      <div class="option">
+        <i class="fas fa-ellipsis-h"></i>
+      </div>
+    </div> -->
+    <!-- <div class="song">
+      <div class="thumb" style="background-image: url('https://photo-resize-zmp3.zadn.vn/w240_r1x1_webp/cover/c/6/d/e/c6def069a1a885c41fe479358fa7c506.jpg')">
+      </div>
+      <div class="body">
+        <h3 class="title">Chạy về khóc với anh</h3>
+        <p class="author">ERIK</p>
+      </div>
+      <div class="option">
+        <i class="fas fa-ellipsis-h"></i>
+      </div>
+    </div>
+    <div class="song">
+      <div class="thumb" style="background-image: url('https://photo-resize-zmp3.zadn.vn/w240_r1x1_webp/cover/c/6/d/e/c6def069a1a885c41fe479358fa7c506.jpg')">
+      </div>
+      <div class="body">
+        <h3 class="title">Chạy về khóc với anh</h3>
+        <p class="author">ERIK</p>
+      </div>
+      <div class="option">
+        <i class="fas fa-ellipsis-h"></i>
+      </div>
+    </div>
+    <div class="song">
+      <div class="thumb" style="background-image: url('https://photo-resize-zmp3.zadn.vn/w240_r1x1_webp/cover/c/6/d/e/c6def069a1a885c41fe479358fa7c506.jpg')">
+      </div>
+      <div class="body">
+        <h3 class="title">Chạy về khóc với anh</h3>
+        <p class="author">ERIK</p>
+      </div>
+      <div class="option">
+        <i class="fas fa-ellipsis-h"></i>
+      </div>
+    </div>
+    <div class="song">
+      <div class="thumb" style="background-image: url('https://photo-resize-zmp3.zadn.vn/w240_r1x1_webp/cover/c/6/d/e/c6def069a1a885c41fe479358fa7c506.jpg')">
+      </div>
+      <div class="body">
+        <h3 class="title">Chạy về khóc với anh</h3>
+        <p class="author">ERIK</p>
+      </div>
+      <div class="option">
+        <i class="fas fa-ellipsis-h"></i>
+      </div>
+    </div> -->
+  </div>
+</div>
+
+<script src="./main.js"></script>
+<!-- Design from: https://static.collectui.com/shots/3671744/musicloud-revolutionary-app-for-music-streaming-large -->
+</body>
+</html>
